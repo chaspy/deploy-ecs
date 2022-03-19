@@ -2,8 +2,14 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 )
 
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello, PipeCD")
+}
+
 func main() {
-	fmt.Printf("hello pipe-cd\n")
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":8080", nil)
 }
