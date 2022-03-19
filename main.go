@@ -8,7 +8,8 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	version := os.Getenv("VERSION")
-	fmt.Printf("Hello, PipeCD %s\n", version)
+	greeting := "Hello, PipeCD "
+	w.Write([]byte(greeting + version))
 }
 
 func main() {
