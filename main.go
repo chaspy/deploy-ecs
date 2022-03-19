@@ -1,13 +1,13 @@
 package main
 
 import (
-  "os"
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-  version := os.Getenv("VERSION")
+	version := os.Getenv("VERSION")
 	fmt.Printf("Hello, PipeCD %s\n", version)
 }
 
