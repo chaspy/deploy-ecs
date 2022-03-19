@@ -14,5 +14,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	fmt.Println("Running...")
 	http.HandleFunc("/", handler)
+	fmt.Println("Running...2")
 	http.ListenAndServe(":80", nil)
+	fmt.Println("Running...3")
 }
