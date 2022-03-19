@@ -15,6 +15,6 @@ func main() {
 	fmt.Println("Running...")
 	http.HandleFunc("/", handler)
 	fmt.Println("Running...2")
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8080", nil)
 	fmt.Println("Running...3")
 }
